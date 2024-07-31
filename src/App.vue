@@ -2,6 +2,7 @@
   import { onMounted, ref, watch } from "vue";
   import { fetchItemById, fetchTopStories } from "./server";
   import dayjs from "dayjs";
+  import { Item } from "./types";
 
   const topstoriesID = ref<number[]>([]);
   onMounted(() => {
@@ -9,7 +10,7 @@
       topstoriesID.value = res.slice(0, 5);
     });
   });
-  const topstories = ref<Record<string, any>[]>([]);
+  const topstories = ref<Item[]>([]);
   watch(topstoriesID, (topstoriesID) => {
     if (topstoriesID.length) {
       topstoriesID.forEach((id) => {

@@ -1,7 +1,8 @@
 import axios from "axios";
+import { Item } from "./types";
 
 export async function fetchItemById(id: string | number) {
-  const { data } = await axios.get<Record<string, any>>(`/item/${id}.json`);
+  const { data } = await axios.get<Item>(`/item/${id}.json`);
   return data;
 }
 
