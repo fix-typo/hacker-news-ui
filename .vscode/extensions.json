@@ -2,6 +2,8 @@
   "recommendations": [
     "esbenp.prettier-vscode",
     "antfu.unocss",
-    "redjue.git-commit-plugin"
+    "redjue.git-commit-plugin",
+    "vue.volar",
+    "dbaeumer.vscode-eslint"
   ]
 }
